@@ -1,0 +1,153 @@
+html {
+    font-size: 10px;
+}
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul ,ol {
+    list-style: none;
+}
+body {
+    direction: ltr;
+    background-color: rgb(236, 239, 241);
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+}
+.container {
+    width: min(100% - 15px,1170px);
+    margin-inline: auto;
+    /* width: 100%;
+    max-width: 1170px;
+    margin : 0 auto ; */
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
+.align-center {
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+[class^="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width:58.33% ;
+}
+.col-8 {
+    width:66.66% ;
+}
+.col-9 {
+    width:75% ;
+}
+.col-10 {
+    width:83.33% ;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+.padding-15{
+    padding: 15px;
+}
+.padding-20{
+    padding: 20px;
+}
+.padding-30{
+    padding: 30px;
+}
+.padding-35{
+    padding: 35px;
+}
+.items-pad {
+    padding: 1.1rem;
+}
+.p-top-15 {
+    padding-top: 15px;
+}
+.p-top-20 {
+    padding-top: 20px;
+}
+.p-top-25 {
+    padding-top: 25px;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.p-top-35 {
+    padding-top: 35px;
+}
+.p-top-40 {
+    padding-top: 40px;
+}
+.p-top-45 {
+    padding-top: 45px;
+}
+.p-top-50 {
+    padding-top: 50px;
+}
+.p-top-60 {
+    padding-top: 60px;
+}
+.p-top-70 {
+    padding-top: 70px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-35 {
+    margin-bottom: 35px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}

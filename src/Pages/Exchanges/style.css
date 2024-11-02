@@ -1,0 +1,12 @@
+.list .items .ex-rank {
+    padding-left: 2rem;
+}
+.list .items .ex-name {
+    margin: 0 0 0 0 ;
+}
+.list .items .ex-tradingpairs{
+    margin: 0 0 0 2rem ;
+}
+.list .items .ex-volume{
+    margin: 0 0 0 2rem ;
+}

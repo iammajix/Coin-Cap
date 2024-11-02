@@ -1,0 +1,35 @@
+.footer {
+    background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246));
+    width: 100%;
+    height: 25.8rem;
+    padding: 4rem 1.6rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+.footer ul h3 {
+    font-size: 1.4rem;
+}
+.footer ul li {
+    padding-bottom: 0.4rem;
+}
+.footer ul a {
+    font-size: 1.4rem;
+    color: rgb(209, 209, 208);
+}
+.footer ul a:hover {
+    color: #ffff;
+}
+.footer ul p {
+    font-size: 1.4rem;
+    color: rgb(209, 209, 208);;
+}
+.footer ul .caption {
+    padding: 1.5rem 0 1.5rem 0 ;
+}
+.footer ul img {
+    opacity: 0.5;
+}
+.footer ul img:hover {
+    opacity: unset;
+}

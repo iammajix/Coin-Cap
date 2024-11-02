@@ -1,0 +1,70 @@
+
+.list {
+    position: relative;
+    padding-top: 3rem;
+}
+.list .title {
+    background-color: #fafafa;
+    border: solid 1px rgb(248, 245, 245);
+    padding: 15px 0 15px 0;
+
+}
+.list .title ul li h3 {
+    font-size: 1.3rem;
+    font-weight: 50;
+}
+.list .title .title-rank h3 {
+    margin-left: 1rem;
+}
+.list .title .title-name  {
+    padding-right: 25rem;
+    padding-left: 6rem;
+}
+.list .title .title-price {
+    padding-right: 5rem;
+}
+.list .title .title-marketcap {
+    margin-left: 5rem;
+
+}
+.list .title .title-vwap {
+    padding-left: 7rem;
+}
+.list .title .title-supply {
+    padding-left: 7rem;
+}
+.list .title .title-volume {
+    padding-left: 8rem;
+}
+.list .title .title-ch-price {
+    padding-left: 5rem;
+}
+.list .items {
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+}
+.list .items ul li  {
+    display: flex;
+    border: solid 1px rgb(248, 245, 245);
+    background-color: rgb(255, 255, 255);
+}
+.list .items .rank {
+    margin: 0 2rem 0 2rem ;
+}
+.list .items .icon {
+    width: 3rem;
+    height: auto;
+}
+.list .items .name {
+    margin: 0 0 0 2rem ;
+}
+.list .items .symbol{
+    display: block;
+}
+
+.list .items .price {
+    /* margin-left: 7rem; */
+}
+.list .items .marketcap {
+    padding-left: 2rem;
+}
