@@ -1,6 +1,8 @@
 import { Fragment, useEffect, useState } from "react";
 import PrimaryLayout from "../../Copmonents/Layout/PrimaryLayout";
+
 import axios from "axios";
+import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
 
 export default function Exchanges (){
     const [data,setData]=useState({
@@ -9,8 +11,8 @@ export default function Exchanges (){
     useEffect (function (){
         axios
         .get("https://api.coincap.io/v2/exchanges")
-        .then(function(responce){
-            setData(responce.data)
+        .then(function(response){
+            setData(response.data)
         })
         .catch(function(erorr){})
     },[])
@@ -44,13 +46,10 @@ function renderFarm (){
     )
     })
 }
-
-
-
-
     return (
         <PrimaryLayout>
             <Fragment>
+                <div><TotalMarket/></div>
           <div className="list">
                 <div className="container">
                     <div className="row p-top-70">

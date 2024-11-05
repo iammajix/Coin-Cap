@@ -24,6 +24,7 @@ export default function Search(){
 
     return (
         <div className="search">
+            {/* <Link to={`/assets/${id}`}> */}
             <AutoComplete
                 style={{
                 width: 100,
@@ -33,7 +34,7 @@ export default function Search(){
                 placeholder="Search ..."
                 allowClear
             />
-
+{/* </Link> */}
        </div>           
     )
 }

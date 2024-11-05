@@ -1,12 +1,15 @@
 import axios from "axios";
 import { Fragment, useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import PrimaryLayout from "../../Copmonents/Layout/PrimaryLayout";
+import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
 import { Divider } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Button,Flex, Spin } from 'antd'
 import { Pagination } from 'antd';
 import { PoweroffOutlined } from '@ant-design/icons';
 import "./style.css";
+
 
 
 
@@ -19,8 +22,8 @@ export default function CoinsList(){
         setLoading(true);
         axios
         .get(`https://api.coincap.io/v2/assets/?offset=${offset}&limit=${LIMIT}`)
-        .then(function(responce){
-            setData (responce.data.data);
+        .then(function(response){
+            setData (response.data.data);
             setOffset(offset+LIMIT)
             setLoading(false);
         })
@@ -28,14 +31,14 @@ export default function CoinsList(){
             setLoading(false);
         });
     },[]);
-function viweMore(){
+function viewMore(){
     console.log(data)
     
     setLoading(true);
         axios
         .get(`https://api.coincap.io/v2/assets/?offset=${offset}&limit=${LIMIT}`)
-        .then(function(responce){
-            setData ([...data,...responce.data.data]);
+        .then(function(response){
+            setData ([...data,...response.data.data]);
             setOffset(offset+LIMIT)
             setLoading(false);
         })
@@ -53,10 +56,9 @@ function viweMore(){
         coinvalue = value/1000000;
     }else if (value>999999999){
         coinvalue = value/1000000000;
-    }else if    (value>999999999999){
+    }else if (value>999999999999){
         coinvalue = value/1000000000000;
     }
-
      return coinvalue.toFixed(2);
     }
 function symbolCurrency (value){
@@ -79,13 +81,19 @@ function symbolCurrency (value){
                 <div>
                   <span className="rank col-4">{rank}</span>  
                 </div>
+                
                 <div className="name items-pad text-center">
+                    
                     <img className="icon" src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`}/>
+                    
                    </div>
                     <div className="coin-name  col-7">
-                        <a>{name}</a> 
-                        <span className="symbol col-12">{symbol}</span>
+                      <Link to={`/assets/${id}`}>  
+                        <a style={{ color :'#000000', fontsize: '0.8rem', opacity: '0.7;'}}>{name}</a> 
+                        <span className="symbol col-12" style={{ color :'#000000', fontsize: '0.8rem', opacity: '0.7;'}}>{symbol}</span>
+                      </Link> 
                     </div>
+                    
                 <div className="price items-pad text-center col-4">
                  <span>${`${parseFloat(priceUsd).toFixed(2)}`}</span>  
                 </div>
@@ -104,23 +112,15 @@ function symbolCurrency (value){
                 <div className="ch-price items-pad text-center col-4">
                  <span>{`${parseFloat(changePercent24Hr).toFixed(2)}`}</span>   
                 </div>
+
             </li>
         );
         
         });
        
     }
-        function changPage (page,pageSize){//---------------pagination---------------->
-                axios
-                .get(`https://api.coincap.io/v2/assets/pages=${pageSize}`)
-                .then(function(responce){
-                    setData (responce.data);
-                })
-                .catch(function(erorr){
-    
-                });
-        }
-    const [loadings, setLoadings] = useState([]);//<----------viwe more button---------->
+
+    const [loadings, setLoadings] = useState([]);//<----------loading---------->
         const enterLoading = (index) => {
             setLoadings((prevLoadings) => {
             const newLoadings = [...prevLoadings];
@@ -140,6 +140,7 @@ function symbolCurrency (value){
         <PrimaryLayout>
             <Spin spinning={loading} size={"large"} fullscreen/>
         <Fragment>   
+        <div><TotalMarket/></div>
             <div className="list">
                 <div className="container">
                     <div className="row p-top-70">
@@ -161,15 +162,14 @@ function symbolCurrency (value){
                         </div>            
                 </div>
             </div>
-           
             <Flex justify="center">
-            <Button
+            <Button className="button"
                 type="primary"
                 loading={loadings[1]}
-                onClick={() => viweMore(1)}
+                onClick={() => viewMore(1)}
                 shape="round"
                 >
-                Viwe More
+                View More
             </Button>
             </Flex>
         </Fragment>

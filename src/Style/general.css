@@ -151,3 +151,20 @@ body {
 .mb-40 {
     margin-bottom: 40px;
 }
+.button{
+    width: 10rem;
+    height: 3.4rem;
+    min-height: 1rem;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+    background: rgb(24, 198, 131);
+    margin-top: 0.5rem;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 550;
+    text-align: center;
+}
+.button:hover{
+    margin-top: 0;
+    transition: 0.6s;
+}
