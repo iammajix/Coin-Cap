@@ -6,6 +6,10 @@ import { Button,Flex, Spin } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons';
 import "./style.css";
 import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
+import Chart from "../../Copmonents/Chart";
+import Charts from "../../Copmonents/Charts";
+
+
 
 export default function Coin (){
     const {coindetail}=useParams();
@@ -17,7 +21,7 @@ export default function Coin (){
     useEffect (function (){
         setLoading(true);
         axios 
-        .get(`https://api.coincap.io/v2/assets/bitcoin`)
+        .get(`https://api.coincap.io/v2/assets/${coindetail}`)
         .then(function(response){
             setData(response.data);
             setLoading(false);
@@ -130,6 +134,7 @@ return (
                                   
                 </div>
             </div>
+        <Charts/>
            
           </Fragment>  
     </PrimaryLayout>

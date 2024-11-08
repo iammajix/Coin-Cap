@@ -1,22 +1,41 @@
 import { Fragment, useEffect, useState } from "react";
 import PrimaryLayout from "../../Copmonents/Layout/PrimaryLayout";
-
+import { useParams } from "react-router-dom";
+import { Button,Flex, Spin } from 'antd'
 import axios from "axios";
 import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
 
 export default function Exchanges (){
+    const [loading,setLoading]=useState(false);
+    const {exchange}=useParams();
     const [data,setData]=useState({
        data :[] ,
     });
     useEffect (function (){
         axios
-        .get("https://api.coincap.io/v2/exchanges")
+        .get(`https://api.coincap.io/v2/exchanges`)
         .then(function(response){
             setData(response.data)
+            setLoading(false);
         })
         .catch(function(erorr){})
+        setLoading(false);
     },[])
-
+    const [loadings, setLoadings] = useState([]);//<----------loading---------->
+    const enterLoading = (index) => {
+        setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = true;
+        return newLoadings;
+});
+setTimeout(() => {
+  setLoadings((prevLoadings) => {
+    const newLoadings = [...prevLoadings];
+    newLoadings[index] = false;
+    return newLoadings;
+  });
+}, 6000);
+};
 
 
 function renderFarm (){
@@ -48,6 +67,7 @@ function renderFarm (){
 }
     return (
         <PrimaryLayout>
+                 <Spin spinning={loading} size={"large"} fullscreen/>
             <Fragment>
                 <div><TotalMarket/></div>
           <div className="list">
