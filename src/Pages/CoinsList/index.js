@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import PrimaryLayout from "../../Copmonents/Layout/PrimaryLayout";
 import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
-import { Divider } from 'antd';
+import { pageTitle } from "../../Copmonents/Helpers/Title/TitleMaker";
 import { LoadingOutlined } from '@ant-design/icons';
 import { Button,Flex, Spin } from 'antd'
 import { Pagination } from 'antd';
@@ -32,8 +32,6 @@ export default function CoinsList(){
         });
     },[]);
 function viewMore(){
-    console.log(data)
-    
     setLoading(true);
         axios
         .get(`https://api.coincap.io/v2/assets/?offset=${offset}&limit=${LIMIT}`)
@@ -46,7 +44,9 @@ function viewMore(){
             setLoading(false);
         });
 }
-
+useEffect (function(){
+    pageTitle("Coincap")
+},[]);
     function math (value){ //<--------------math-------------->
         let coinvalue=0;
         value=parseFloat(value);

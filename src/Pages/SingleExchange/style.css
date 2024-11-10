@@ -1,8 +1,8 @@
-.coin-item {
+.ex-item {
     position: relative;
     padding-top: 4rem;
 }
-.coin-item .flag{
+.ex-item .flag{
     background: rgb(24, 198, 131);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -16,7 +16,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
     
 }
-.coin-item .flag:before{
+.ex-item .flag:before{
     content: "";
     width: calc(100% + 20px);
     height: 10px;
@@ -26,29 +26,29 @@
     top: 0px;
     border-radius: 8px;
 }
-.coin-item .flag h1{
+.ex-item .flag h1{
     font-size: 3rem;
     padding: 2rem 1.2rem 0 1.2rem
 }
-.coin-item .detailcoin{
+.ex-item .detail-ex{
     margin-left: 9rem;
     color: antiquewhite;
     font-size: 1.5rem;
     padding: 1rem 0 0 0rem ;
     
 }
-.coin-item .detailcoin .change {
+.ex-item .detail-ex .change {
     padding-left: 2rem;
 }
-.coin-item .rightdetail{
+.ex-item .rightdetail{
     color: aliceblue;
     font-size: 1.5rem;
 }
-.coin-item .website{
+.ex-item .website{
     padding-top: 0.8rem;
     margin-left: 16rem;
 }
-.coin-item .explorer{
+.ex-item .explorer{
     padding-top: 0.8rem;
     margin-left: 7rem;
 }

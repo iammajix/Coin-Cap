@@ -1,0 +1,64 @@
+.coin-item {
+    position: relative;
+    padding-top: 4rem;
+}
+.coin-item .flag{
+    background: rgb(24, 198, 131);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+    height: 10rem;
+    display: inline-block;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+    
+}
+.coin-item .flag:before{
+    content: "";
+    width: calc(100% + 20px);
+    height: 10px;
+    background: inherit;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border-radius: 8px;
+}
+.coin-item .flag h1{
+    font-size: 3rem;
+    padding: 2rem 1.2rem 0 1.2rem
+}
+.coin-item .detailcoin{
+    margin-left: 9rem;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    padding: 1rem 0 0 0rem ;
+    
+}
+.coin-item .detailcoin .change {
+    padding-left: 2rem;
+}
+.coin-item .rightdetail{
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+.coin-item .website{
+    padding-top: 0.8rem;
+    margin-left: 16rem;
+}
+.coin-item .explorer{
+    padding-top: 0.8rem;
+    margin-left: 7rem;
+}
+.title-coin{
+    font-Size:'1.4rem';
+    font-Weight:'700';
+    opacity:'0.5';
+}
+.coin-detail .coin-name .icon {
+    position: absolute;
+    left: 20rem;
+}
+

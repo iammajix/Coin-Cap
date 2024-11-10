@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import PrimaryLayout from "../../Copmonents/Layout/PrimaryLayout";
 import { Button,Flex, Spin } from 'antd'
-import { LoadingOutlined } from '@ant-design/icons';
+import { pageTitle } from "../../Copmonents/Helpers/Title/TitleMaker";
 import "./style.css";
 import TotalMarket from "../../Copmonents/Helpers/TotalMarket";
 import Chart from "../../Copmonents/Chart";
@@ -11,7 +11,7 @@ import Charts from "../../Copmonents/Charts";
 
 
 
-export default function Coin (){
+export default function SingleCoin (){
     const {coindetail}=useParams();
     const [data,setData]=useState({
       data:{},
@@ -31,6 +31,9 @@ export default function Coin (){
         })
         
     },{coindetail});
+    useEffect (function(){
+        pageTitle("Coins")
+    },[]);
     const [loadings, setLoadings] = useState([]);//<----------loading---------->
     const enterLoading = (index) => {
         setLoadings((prevLoadings) => {
@@ -68,8 +71,8 @@ return (
                              </div>
                          </div>
                          
-                         <div className="rightdetail col-6 ">
-                            <div className="row " style={{padding:'3rem 0 0 0 ',marginLeft:'15rem'}}>
+                         <div className="rightdetail col-7 ">
+                            <div className="row " style={{padding:'2rem 0 0 0 ',marginLeft:'15rem'}}>
                             <div className="marketcap ">
                             <p>Market Cap</p>
                             <h3 className="text-center" style={{fontSize:'2rem'}}>
@@ -104,12 +107,14 @@ return (
                 <div className="container">
                     <div className="row p-top-40">
                         <div className="title flex col-6">
-                            <div className="coin-name" style={{paddingLeft:'5rem',fontSize:'1rem'}}>
-                            {/* <img className="icon" src={`shttps://assets.coincap.io/assets/icons/${data.data.symbol.toLowerCase()}@2x.png`}/> */}
+                            <div className="coin-name" style={{paddingLeft:'15rem',fontSize:'1rem'}}>
+                                <div className="icon">
+                                {/* <img className="icon" src={`https://assets.coincap.io/assets/icons/${data.data.symbol.toLowerCase()}@2x.png`}/> */}
+                            </div>
                                  <h2 className="name">{data.data.name}({data.data.symbol})</h2>
                                  <p className="date" style={{fontSize:'1.2rem',paddingTop:'3rem'}}>{data.timestamp}</p>
                             </div>
-                            <div className="low-high " style={{paddingLeft:'50rem'}}>
+                            <div className="low-high " style={{paddingLeft:'30rem'}}>
                                 <div className="high flex" style={{paddingBottom:'3rem'}}>
                                     <span style={{fontSize:'1.4rem',fontWeight:'700',opacity:'0.5',paddingRight:'2rem'}}>HIGHT</span>
                                     <h2>$69,357.53</h2>

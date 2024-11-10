@@ -18,7 +18,7 @@
 }
 .list .title .title-name  {
     padding-right: 25rem;
-    padding-left: 6rem;
+    padding-left: 1rem;
 }
 .list .title .title-price {
     padding-right: 5rem;
@@ -56,7 +56,7 @@
     height: auto;
 }
 .list .items .name {
-    margin: 0 0 0 2rem ;
+    margin: 0 0 0 3rem ;
 }
 .list .items .symbol{
     display: block;

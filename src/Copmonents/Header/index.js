@@ -10,11 +10,11 @@ export default function Header (){
     const menu = [
         {
             name : "Coins",
-            link : "/",
+            link : "",
         },
         {
             name : "Exchanges",
-            link : "Exchanges",
+            link : "exchanges",
         },
         {
             name :"Contact us",
@@ -26,7 +26,7 @@ export default function Header (){
             const {name , link} =item;
             return (
                 <li key={index}>
-                    <Link to={link}>{name}</Link>
+                    <Link to={`/${link}`}>{name}</Link>
                 </li>
             );
 

@@ -1,12 +1,33 @@
+.list .title-rank {
+    margin-left: 1rem;
+}
+.list .title-name {
+    margin-left: 5rem;
+}
+.list .title-volume {
+    margin-left: 5rem;
+}
+.list .title-total {
+    margin-left: 15rem;
+}
+.list .title-status {
+    margin-left: 13rem;
+}
 .list .items .ex-rank {
-    padding-left: 2rem;
+    padding-left: 3rem;
 }
 .list .items .ex-name {
-    margin: 0 0 0 0 ;
+    margin-left: 5rem ;
 }
 .list .items .ex-tradingpairs{
-    margin: 0 0 0 2rem ;
+    margin-left: 7rem;
 }
 .list .items .ex-volume{
-    margin: 0 0 0 2rem ;
+    margin-left: 13rem ;
+}
+.list .items .ex-total{
+    padding-left: 6rem ;
+}
+.list .items .ex-status {
+    padding-left: 8rem;
 }
